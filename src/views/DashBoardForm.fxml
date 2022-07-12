@@ -1,8 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
 
-<AnchorPane prefHeight="488.0" prefWidth="880.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashBoardFormController">
-
+<AnchorPane prefHeight="488.0" prefWidth="880.0" style="-fx-background-color: #273c75;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashBoardFormController">
+   <children>
+      <Label layoutX="215.0" layoutY="82.0" text="Student Management System" textFill="WHITE">
+         <font>
+            <Font name="Arial Black" size="28.0" />
+         </font>
+      </Label>
+      <JFXButton buttonType="RAISED" layoutX="73.0" layoutY="202.0" onAction="#saveOnAction" prefHeight="57.0" prefWidth="207.0" style="-fx-background-color: #7f8fa6; -fx-background-radius: 100px;" text="Save Student" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="324.0" layoutY="202.0" onAction="#searchOnAction" prefHeight="57.0" prefWidth="207.0" style="-fx-background-color: #7f8fa6; -fx-background-radius: 100px;" text="Search Student" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="572.0" layoutY="202.0" onAction="#updateOnAction" prefHeight="57.0" prefWidth="207.0" style="-fx-background-color: #7f8fa6; -fx-background-radius: 100px;" text="Update Student" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="73.0" layoutY="300.0" onAction="#loadOnAction" prefHeight="57.0" prefWidth="207.0" style="-fx-background-color: #7f8fa6; -fx-background-radius: 100px;" text="Load All Student" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="324.0" layoutY="300.0" onAction="#deleteOnAction" prefHeight="57.0" prefWidth="207.0" style="-fx-background-color: #7f8fa6; -fx-background-radius: 100px;" text="Delete Student" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </JFXButton>
+   </children>
 </AnchorPane>
