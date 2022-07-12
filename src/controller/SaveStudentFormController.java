@@ -21,7 +21,7 @@ public class SaveStudentFormController {
                 txtId.getText(),txtName.getText(), txtAddress.getText(),txtContact.getText(),txtEmail.getText(),txtNic.getText());
 
         try {
-            if (CrudUtil.execute("INSERT INTO Student VALUES (?,?,?,?)",s.getId(),s.getName(),s.getAddress(),s.getContact(),s.getEmail(),s.getNic())){
+            if (CrudUtil.execute("INSERT INTO Student VALUES (?,?,?,?,?,?)",s.getId(),s.getName(),s.getAddress(),s.getContact(),s.getEmail(),s.getNic())){
                 new Alert(Alert.AlertType.CONFIRMATION, "Saved!..").show();
             }
         } catch (ClassNotFoundException | SQLException e) {
