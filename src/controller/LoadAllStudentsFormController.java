@@ -12,7 +12,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class LoadAllStudentsFormController {
-    public TableView tblStudents;
+    public TableView<Student> tblStudents;
     public TableColumn colId;
     public TableColumn colName;
     public TableColumn colAddress;
@@ -22,12 +22,12 @@ public class LoadAllStudentsFormController {
 
     public void initialize(){
 
-        colId.setCellValueFactory(new PropertyValueFactory("id"));
+        colId.setCellValueFactory(new PropertyValueFactory("student_id"));
         colName.setCellValueFactory(new PropertyValueFactory("name"));
         colAddress.setCellValueFactory(new PropertyValueFactory("address"));
         colContact.setCellValueFactory(new PropertyValueFactory("contact"));
         colEmail.setCellValueFactory(new PropertyValueFactory("email"));
-        colNic.setCellValueFactory(new PropertyValueFactory("nic"));
+        colNic.setCellValueFactory(new PropertyValueFactory("NIC"));
 
 
         try {
@@ -44,12 +44,12 @@ public class LoadAllStudentsFormController {
         while (result.next()){
             obList.add(
                     new Student(
-                            result.getString("id"),
+                            result.getString("student_id"),
                             result.getString("name"),
                             result.getString("address"),
                             result.getString("contact"),
                             result.getString("email"),
-                            result.getString("nic"))
+                            result.getString("NIC"))
 
             );
         }

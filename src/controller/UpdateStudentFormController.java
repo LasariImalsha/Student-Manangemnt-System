@@ -17,7 +17,7 @@ public class UpdateStudentFormController {
 
     public void txtSearchOnAction(ActionEvent actionEvent) {
         try {
-            ResultSet result =  CrudUtil.execute("SELECT * FROM Student WHERE id=?",txtId.getText());
+            ResultSet result =  CrudUtil.execute("SELECT * FROM Student WHERE student_id=?",txtId.getText());
             if (result.next()) {
                 txtName.setText(result.getString(2));
                 txtAddress.setText(result.getString(3));
@@ -36,7 +36,7 @@ public class UpdateStudentFormController {
                 txtId.getText(),txtName.getText(), txtAddress.getText(),txtContact.getText(),txtEmail.getText(),txtNic.getText());
 
         try{
-            boolean isUpdated = CrudUtil.execute("UPDATE Student SET name=? , address=? , contact=? , email=?  WHERE id=?",s.getName(),s.getAddress(),s.getContact(),s.getEmail(),s.getId());
+            boolean isUpdated = CrudUtil.execute("UPDATE Student SET name=? , address=? , contact=? , email=? , NIC =? WHERE student_id=?",s.getName(),s.getAddress(),s.getContact(),s.getEmail(),s.getNic(),s.getId());
             if (isUpdated){
                 new Alert(Alert.AlertType.CONFIRMATION, "Updated!").show();
             }else{

@@ -20,7 +20,7 @@ public class DeleteFormController {
 
     public void deleteOnAction(ActionEvent actionEvent) {
         try{
-            if (CrudUtil.execute("DELETE FROM Student WHERE id=?",txtId.getText())){
+            if (CrudUtil.execute("DELETE FROM Student WHERE student_id=?",txtId.getText())){
                 new Alert(Alert.AlertType.CONFIRMATION, "Deleted!").show();
             }else{
                 new Alert(Alert.AlertType.WARNING, "Try Again!").show();
@@ -32,7 +32,7 @@ public class DeleteFormController {
     }
 
     private void search() throws SQLException, ClassNotFoundException {
-        ResultSet result = CrudUtil.execute("SELECT * FROM Student WHERE id=?",txtId.getText());
+        ResultSet result = CrudUtil.execute("SELECT * FROM Student WHERE student_id=?",txtId.getText());
         if (result.next()) {
             txtName.setText(result.getString(2));
             txtAddress.setText(result.getString(3));

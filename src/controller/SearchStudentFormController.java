@@ -8,6 +8,8 @@ import java.sql.SQLException;
 import util.CrudUtil;
 import java.sql.*;
 
+import static util.CrudUtil.execute;
+
 public class SearchStudentFormController {
     public TextField txtId;
     public TextField txtName;
@@ -33,7 +35,7 @@ public class SearchStudentFormController {
     }
 
     private void search() throws ClassNotFoundException, SQLException {
-        ResultSet result = CrudUtil.execute("SELECT * FROM Student WHERE id=?",txtId.getText());
+        ResultSet result = CrudUtil.execute("SELECT * FROM Student WHERE student_id=?",txtId.getText());
         if (result.next()) {
             txtName.setText(result.getString(2));
             txtAddress.setText(result.getString(3));
