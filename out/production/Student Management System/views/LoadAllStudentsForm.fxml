@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="448.0" prefWidth="880.0" style="-fx-background-color: #487eb0;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoadAllStudentsFormController">
+   <children>
+      <Label layoutX="35.0" layoutY="23.0" prefHeight="61.0" prefWidth="200.0" text="Load All Students" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </Label>
+      <Separator layoutX="31.0" layoutY="78.0" prefHeight="25.0" prefWidth="192.0" />
+      <TableView fx:id="tblStudents" layoutX="42.0" layoutY="124.0" prefHeight="277.0" prefWidth="789.0">
+        <columns>
+          <TableColumn fx:id="colId" prefWidth="89.0" text="ID" />
+          <TableColumn fx:id="colName" prefWidth="148.0" text="Name" />
+            <TableColumn fx:id="colAddress" prefWidth="149.0" text="Address" />
+            <TableColumn fx:id="colContact" prefWidth="143.0" text="Contact" />
+            <TableColumn fx:id="colEmail" prefWidth="142.0" text="Email" />
+            <TableColumn fx:id="colNic" prefWidth="117.0" text="NIC" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
